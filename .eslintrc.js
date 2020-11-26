@@ -79,7 +79,7 @@ module.exports = {
     "func-names": ["error", "always"], // 要求或禁止使用命名的 function 表达式
     "func-style": ["error", "declaration", { "allowArrowFunctions": true }], // 强制一致地使用 function 声明或表达式
     "function-paren-newline": ["error", "multiline"], // 强制在函数括号内使用一致的换行
-    "implicit-arrow-linebreak": ["error", "beside"], // 强制隐式返回的箭头函数体的位置
+    "implicit-arrow-linebreak": ["off", "beside"], // 不强制隐式返回的箭头函数体的位置
     "indent": ["error", 2, { "SwitchCase": 1 }], // 两个空格缩进
     "jsx-quotes": ["error", "prefer-double"], // 强制在 JSX 属性中一致地使用双引号或单引号
     "key-spacing": ["error", { "beforeColon": false, "afterColon": true }], // 强制在对象字面量的属性中键和值之间使用一致的间距
