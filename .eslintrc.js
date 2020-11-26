@@ -88,7 +88,7 @@ module.exports = {
     "max-depth": ["error", 4], // 强制可嵌套的块的最大深度
     "max-nested-callbacks": ["error", 3], // 强制回调函数最大嵌套深度
     "max-params": ["error", 6], // 强制函数定义中最多允许的参数数量
-    "multiline-comment-style": ["warn", "starred-block"], // 强制对多行注释使用特定风格
+    "multiline-comment-style": ["off", "starred-block"], // 不强制对多行注释使用特定风格
     "multiline-ternary": ["error", "always-multiline"], // 要求或禁止在三元操作数中间换行
     "new-cap": ["error", { "capIsNew": false }], // 要求构造函数首字母大写
     "no-array-constructor": ["error"], // 禁用 Array 构造函数
