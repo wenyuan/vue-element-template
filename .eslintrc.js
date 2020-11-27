@@ -11,7 +11,7 @@ module.exports = {
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "prettier/prettier": "error", // 被 prettier 标记的地方抛出错误信息
+    "prettier/prettier": "off", // 被 prettier 标记的地方抛出错误信息
     /*
      * 代码中可能的错误或逻辑错误
      */

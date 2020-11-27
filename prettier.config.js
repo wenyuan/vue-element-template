@@ -7,5 +7,6 @@ module.exports = {
   singleQuote: true, // 使用单引号，默认为 false
   semi: false, // 行位是否使用分号，默认为 true
   trailingComma: 'none', // 是否使用尾逗号，有三个可选值"<none|es5|all>"
-  bracketSpacing: true // 对象大括号直接是否有空格，默认为true，效果：{ foo: bar }
+  bracketSpacing: true, // 对象大括号直接是否有空格，默认为true，效果：{ foo: bar }
+  endOfLine: 'lf' // 强制使用 unix 的行结束符（\n）
 }
