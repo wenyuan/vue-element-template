@@ -4,7 +4,7 @@
 
 vue-element-template 是一个小型化 Vue.js 项目模板，它基于 [vue](https://cn.vuejs.org/) 和 [element-ui](https://element.eleme.cn/) 实现。
 
-本项目借鉴 GitHub 上几个我认为不错的项目（取长补短）搭建而成，提炼了典型的目录组织和代码风格，删去了丰富的子功能，仅保留最原始的模型，目的是为了方便快速搭建一个小项目，更适合定制化开发。
+本项目借鉴 GitHub 上几个不错的项目（取长补短）搭建而成，提炼了典型的目录组织和代码风格，删去了丰富的子功能，仅保留最原始的模型，目的是为了方便快速搭建一个小项目，更适合定制化开发。
 
 以下是我主要参考的项目：
 
@@ -16,7 +16,7 @@ vue-element-template 是一个小型化 Vue.js 项目模板，它基于 [vue](ht
 
 你需要在本地安装 [node](https://nodejs.org/) 和 [git](https://git-scm.com/) 。
 
-本项目通过 `@vue/cli@4.5.9` 脚手架搭建完成，技术栈基于 [ES2015+](http://es6.ruanyifeng.com/) 、[vue](https://cn.vuejs.org/) 、[vuex](https://vuex.vuejs.org/zh/) 、[vue-router](https://router.vuejs.org/zh/) 、[vue-cli](https://cli.vuejs.org/zh/) 、[axios](https://github.com/axios/axios) 和 [element-ui](https://element.eleme.cn/)，所有的请求数据都使用本地 json 文件进行模拟，力求依赖最少化。
+本项目通过 `@vue/cli@4.5.9` 脚手架搭建完成，技术栈基于 [ES2015+](http://es6.ruanyifeng.com/) 、[vue](https://cn.vuejs.org/) 、[vuex](https://vuex.vuejs.org/zh/) 、[vue-router](https://router.vuejs.org/zh/) 、[vue-cli](https://cli.vuejs.org/zh/) 、[axios](https://github.com/axios/axios) 和 [element-ui](https://element.eleme.cn/) ，所有的请求数据都使用本地 json 文件进行模拟，力求依赖最少化。
 
 相关依赖的版本参见 `package.json` 文件。
 
@@ -24,6 +24,7 @@ vue-element-template 是一个小型化 Vue.js 项目模板，它基于 [vue](ht
 
 * 本项目不是一个完整的后台管理系统解决方案，仅是一个项目的基础模板，各功能需要根据需求自行开发。
 * 本项目中会尽可能详细注释，可供新手学习，实际开发可删除这些注释文字。
+* 本项目中对代码的注释将采用英文形式（帮助女朋友提高英文能力），但会确保通过有道词典（或同类工具）的翻译，最终输出通顺流利的中文句子。
 
 ## 代码风格
 
