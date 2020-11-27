@@ -54,7 +54,7 @@ module.exports = {
     "no-self-assign": ["error", { props: true }], // 禁止自我赋值
     "no-unused-labels": ["error"], // 禁用出现未使用过的标
     "no-useless-escape": ["error"], // 禁用不必要的转义字符
-    "radix": ["error"], // 强制在parseInt()使用基数参数
+    "radix": ["off"], // 不强制在parseInt()使用基数参数
     /*
      * 变量声明
      */
@@ -73,12 +73,12 @@ module.exports = {
     "comma-spacing": ["error", { "before": false, "after": true }], // 强制在逗号前后使用一致的空格
     "comma-style": ["error", "last"], // 强制使用一致的逗号风格
     "computed-property-spacing": ["error", "never"], // 强制在计算的属性的方括号中使用一致的空格
-    "consistent-this": ["error", "that"], // 当获取当前执行环境的上下文时，强制使用一致的命名
+    "consistent-this": ["off", "that"], // 当获取当前执行环境的上下文时，不要求强制使用一致的命名
     "eol-last": ["error", "always"], // 要求或禁止文件末尾存在空行
     "func-call-spacing": ["error", "never"], // 要求或禁止在函数标识符和其调用之间有空格
-    "func-names": ["error", "always"], // 要求或禁止使用命名的 function 表达式
-    "func-style": ["error", "declaration", { "allowArrowFunctions": true }], // 强制一致地使用 function 声明或表达式
-    "function-paren-newline": ["error", "multiline"], // 强制在函数括号内使用一致的换行
+    "func-names": ["off", "always"], // 不强制要求或禁止使用命名的 function 表达式
+    "func-style": ["off", "declaration", { "allowArrowFunctions": true }], // 不强制一致地使用 function 声明或表达式
+    "function-paren-newline": ["off", "multiline"], // 不强制在函数括号内使用一致的换行
     "implicit-arrow-linebreak": ["off", "beside"], // 不强制隐式返回的箭头函数体的位置
     "indent": ["error", 2, { "SwitchCase": 1 }], // 两个空格缩进
     "jsx-quotes": ["error", "prefer-double"], // 强制在 JSX 属性中一致地使用双引号或单引号
@@ -92,7 +92,7 @@ module.exports = {
     "multiline-ternary": ["error", "always-multiline"], // 要求或禁止在三元操作数中间换行
     "new-cap": ["error", { "capIsNew": false }], // 要求构造函数首字母大写
     "no-array-constructor": ["error"], // 禁用 Array 构造函数
-    "no-mixed-operators": ["error"], // 禁止混合使用不同的操作符
+    "no-mixed-operators": ["off"], // 允许混合使用不同的操作符
     "no-mixed-spaces-and-tabs": ["error"], // 禁止空格和 tab 的混合缩进
     "no-multiple-empty-lines": ["error"], // 禁止出现多行空行
     "no-new-object": ["error"], // 禁用 Object 的构造函数
@@ -100,7 +100,7 @@ module.exports = {
     "no-trailing-spaces": ["error", { "skipBlankLines": false, "ignoreComments": false }], // 禁用行尾空白
     "no-whitespace-before-property": ["error"], // 禁止属性前有空白
     "nonblock-statement-body-position": ["error", "beside"], // 强制单个语句的位置
-    "object-curly-spacing": ["error", "never"], // 强制在大括号中使用一致的空格
+    "object-curly-spacing": ["off", "never"], // 不强制在大括号中使用一致的空格
     "operator-linebreak": ["error", "after"], // 强制操作符使用一致的换行符
     "quotes": ["error", "single"], // 使用单引号
     "semi": ["error", "never"], // 行末不加分号，如果加了不报错，仅给出提示

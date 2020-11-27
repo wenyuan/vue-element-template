@@ -1,7 +1,7 @@
 // prettier.config.js or .prettierrc.js 返回对象
 module.exports = {
   eslintIntegration: true, // 开启 eslint 支持
-  printWidth: 80, // 一行的字符数，如果超过会进行换行，默认为 80
+  printWidth: 120, // 一行的字符数，如果超过会进行换行，默认为 80
   tabWidth: 2, // 一个 tab 代表几个空格数，默认为 2
   useTabs: false, // 是否使用 tab 进行缩进，默认为 false，表示用空格进行缩减
   singleQuote: true, // 使用单引号，默认为 false
