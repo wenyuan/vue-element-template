@@ -4,18 +4,33 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 import Home from '../views/Home.vue'
+/* Layout */
+import Layout from '@/layout'
 
 const routes = [
   {
     path: '/login',
-    // 路线级别代码切分
-    // 通过配置 webpackChunkName，将为该路由生成一个单独的块(login.[hash].js)
-    // 在该路由被访问时，会懒加载(lazy-loaded)该 js 文件
+    // route level code-splitting
+    // when specifying a webpackChunkName，this generates a separate chunk (login.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "login" */ '@/views/login/index'),
     hidden: true
   },
   {
     path: '/',
+    component: Layout,
+    redirect: '/dashboard',
+    children: [
+      {
+        path: 'dashboard',
+        name: 'Dashboard',
+        component: () => import('@/views/dashboard/index'),
+        meta: { title: 'Dashboard', icon: 'dashboard' }
+      }
+    ]
+  },
+  {
+    path: '/home',
     name: 'Home',
     component: Home
   },
