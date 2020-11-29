@@ -44,19 +44,19 @@ axiosService.interceptors.response.use(
    */
   response => {
     const res = response.data
-    // if the custom code is not 20000, it is judged as an error.
-    if (res.code !== 20000) {
+    // if the custom code is not 1, it is judged as an error.
+    if (res.code !== 1) {
       Message({
-        message: res.message || 'Error',
+        message: res.msg || 'Error',
         type: 'error',
         duration: 5 * 1000
       })
-      // 50008: Illegal token; 50012: Other clients logged in; 50014: Token expired;
-      if (res.code === 50008 || res.code === 50012 || res.code === 50014) {
+      // 401: Not logged in
+      if (res.code === 401) {
         // to re-login
-        MessageBox.confirm('You have been logged out, you can cancel to stay on this page, or log in again', 'Confirm logout', {
-          confirmButtonText: 'Re-Login',
-          cancelButtonText: 'Cancel',
+        MessageBox.confirm('您已经登出，您可以点击取消停留在此页面，或重新登录', '确认登出', {
+          confirmButtonText: '重新登录',
+          cancelButtonText: '取消',
           type: 'warning'
         }).then(() => {
           store.dispatch('user/resetToken').then(() => {
@@ -64,15 +64,61 @@ axiosService.interceptors.response.use(
           })
         })
       }
-      return Promise.reject(new Error(res.message || 'Error'))
+      return Promise.reject(new Error(res.msg || 'Error'))
     } else {
       return res
     }
   },
   error => {
     console.log('err' + error) // for debug
+    // judge the HTTP Status Code in error case, then prompt to the user
+    let text = ''
+    if (error && error.response) {
+      switch (error.response.status) {
+        case 400:
+          text = '请求错误(400)，请重新申请'
+          break
+        case 401:
+          text = '未授权(401)，请重新登录'
+          store.dispatch('user/resetToken').then(() => {
+            location.reload()
+          })
+          break
+        case 403:
+          text = '拒绝访问(403)'
+          break
+        case 404:
+          text = '请求出错(404)'
+          break
+        case 408:
+          text = '请求超时(408)'
+          break
+        case 500:
+          text = '服务器错误(500)，请重启软件或切换功能页！'
+          break
+        case 501:
+          text = '服务未实现(501)'
+          break
+        case 502:
+          text = '网络错误(502)'
+          break
+        case 503:
+          text = '服务不可用(503)'
+          break
+        case 504:
+          text = '网络超时(504)'
+          break
+        case 505:
+          text = 'HTTP版本不受支持(505)'
+          break
+        default:
+          text = '网络连接出错(${error.response.status})'
+      }
+    } else {
+      text = '连接服务器失败，请退出重试！'
+    }
     Message({
-      message: error.message,
+      message: text,
       type: 'error',
       duration: 5 * 1000
     })

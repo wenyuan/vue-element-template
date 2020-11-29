@@ -12,8 +12,8 @@ const name = defaultSettings.title || 'Vue Element Template' // page title
 // use administrator privileges to execute the command line.
 // For example, Mac: sudo npm run
 // You can change the port by the following method:
-// port = 9527 npm run dev OR npm run dev --port = 9527
-const port = process.env.port || process.env.npm_config_port || 9527 // dev port
+// port = 12306 npm run dev OR npm run dev --port = 12306
+const port = process.env.port || process.env.npm_config_port || 12306 // dev port
 
 // All configuration item explanations can be find in https://cli.vuejs.org/config/
 module.exports = {
