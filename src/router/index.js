@@ -48,23 +48,35 @@ const routes = [
     ]
   },
   {
-    path: '/example',
+    path: '/student',
     component: Layout,
-    redirect: '/example/table',
-    name: 'Example',
-    meta: { title: 'Example', icon: 'el-icon-s-help' },
     children: [
       {
-        path: 'table',
-        name: 'Table',
-        component: () => import('@/views/table/index'),
-        meta: { title: 'Table', icon: 'table' }
+        path: 'index',
+        name: 'Student',
+        component: () => import('@/views/student/index'),
+        meta: { title: '学生信息', icon: 'form' }
+      }
+    ]
+  },
+  {
+    path: '/example',
+    component: Layout,
+    redirect: '/example/example1',
+    name: 'Example',
+    meta: { title: '示例页面', icon: 'el-icon-s-help' },
+    children: [
+      {
+        path: 'example1',
+        name: 'Example1',
+        component: () => import('@/views/example/example1'),
+        meta: { title: '页面一', icon: 'table' }
       },
       {
-        path: 'tree',
-        name: 'Tree',
-        component: () => import('@/views/tree/index'),
-        meta: { title: 'Tree', icon: 'tree' }
+        path: 'example2',
+        name: 'Example2',
+        component: () => import('@/views/example/example2'),
+        meta: { title: '页面二', icon: 'tree' }
       }
     ]
   }

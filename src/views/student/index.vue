@@ -88,7 +88,7 @@
 import { getStudentList } from '@/api/student'
 
 export default {
-  name: 'StudentList',
+  name: 'Student',
   data() {
     return {
       tableLoading: true,
