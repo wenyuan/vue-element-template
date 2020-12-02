@@ -74,6 +74,25 @@ export default {
     dialogVisible: {
       type: Boolean,
       default: false
+    },
+    mode: {
+      type: String,
+      default: 'view' // ['view', 'edit', 'add']
+    },
+    studentInfo: {
+      type: Object,
+      // Props with type Object/Array must use a factory function to return the default value.
+      default: () => ({
+        sno: '',
+        name: '',
+        gender: '',
+        birthday: '',
+        mobile: '',
+        email: '',
+        address: '',
+        image: '',
+        imageUrl: ''
+      })
     }
   },
   data() {
