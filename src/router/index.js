@@ -55,7 +55,7 @@ const routes = [
         path: 'index',
         name: 'Student',
         component: () => import('@/views/student/index'),
-        meta: { title: '学生信息', icon: 'form' }
+        meta: { title: '学生信息', icon: 'el-icon-menu' }
       }
     ]
   },

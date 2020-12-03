@@ -3,25 +3,21 @@
     <!-- For user experience design, the sidebar only displays two levels of sub-menus -->
     <!-- The logic here is just a demo, you can design by yourself -->
     <template v-if="hasNoSubMenu(item.children, item)">
-      <app-link :to="resolvePath(showingItem.path)">
-        <el-menu-item :index="resolvePath(showingItem.path)">
-          <i :class="showingItem.meta.icon"></i>
-          <span slot="title">{{ showingItem.meta.title }}</span>
-        </el-menu-item>
-      </app-link>
+      <el-menu-item :index="resolvePath(showingItem.path)">
+        <i :class="showingItem.meta.icon"></i>
+        <span slot="title">{{ showingItem.meta.title }}</span>
+      </el-menu-item>
     </template>
     <template v-if="hasSubMenu(item.children, item)">
       <el-submenu :index="resolvePath(showingItem.path)">
         <template slot="title"><i :class="showingItem.meta.icon"></i>{{ showingItem.meta.title }}</template>
-        <app-link :to="resolvePath(showingItem.path)">
-          <el-menu-item
-            :key="resolvePath(showingSubItem.path)"
-            :index="resolvePath(showingSubItem.path)"
-            v-for="showingSubItem in showingSubItems"
-          >
-            <span slot="title">{{ showingSubItem.meta.title }}</span>
-          </el-menu-item>
-        </app-link>
+        <el-menu-item
+          :key="resolvePath(showingSubItem.path)"
+          :index="resolvePath(showingSubItem.path)"
+          v-for="showingSubItem in showingSubItems"
+        >
+          <span slot="title">{{ showingSubItem.meta.title }}</span>
+        </el-menu-item>
       </el-submenu>
     </template>
   </div>
@@ -30,13 +26,9 @@
 <script>
 import path from 'path'
 import { isExternal } from '@/utils/validate'
-import AppLink from './Link'
-import FixiOSBug from './FixiOSBug'
 
 export default {
   name: 'SidebarItem',
-  components: { AppLink },
-  mixins: [FixiOSBug],
   props: {
     // route object
     item: {
@@ -53,9 +45,6 @@ export default {
     }
   },
   data() {
-    // To fix https://github.com/PanJiaChen/vue-admin-template/issues/237
-    // TODO: refactor with render function
-    this.onlyOneChild = null
     return {
       showingItem: null,
       showingSubItems: []
