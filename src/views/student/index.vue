@@ -3,12 +3,12 @@
     <!-- table form -->
     <el-form :inline="true" style="margin-top:30px;">
       <el-row>
-        <el-col :span="12">
+        <el-col :span="12" style="text-align: left">
           <el-form-item label="请输入查询条件：">
             <el-input v-model="searchKeyword" placeholder="输入查询条件" style="width: 420px;"></el-input>
           </el-form-item>
         </el-col>
-        <el-col :span="8" style="text-align: right;padding-right:10px;">
+        <el-col :span="8" style="text-align: right; padding-right: 10px;">
           <el-button-group>
             <el-button type="primary" icon="el-icon-search" @click="handleStudentsQuery">查询</el-button>
             <el-button type="primary" icon="el-icon-tickets" @click="handleStudentsQueryAll">全部</el-button>
@@ -68,7 +68,7 @@
     <!-- table pagination -->
     <el-row style="margin-top: 20px;">
       <el-col :span="8" style="text-align: left">
-        <el-button type="danger" icon="el-icon-delete" size="mini" @click="handleStudentsDelete()">批量删除</el-button>
+        <el-button type="danger" icon="el-icon-delete" size="mini" @click="handleStudentsDelete">批量删除</el-button>
       </el-col>
       <el-col :span="16" style="text-align: right">
         <el-pagination
@@ -90,7 +90,6 @@
         :rules="rules"
         ref="studentForm"
         :inline="true"
-        style="margin-left: 20px;"
         label-width="110px"
         label-position="right"
         size="mini"
@@ -162,20 +161,32 @@ import {
   updateStudent,
   deleteStudent,
   deleteStudents,
+  checkSNoExist,
   uploadAvatar,
   uploadExcel,
   downloadExcel
-} from '@/api/student'
+} from '@/api/student-mock' // FIXME...replace student-mock with student in production（这句有道词典可能会翻译错误）
 
 export default {
   name: 'Student',
   data() {
     const validateSNo = (rule, value, callback) => {
-      if (['admin'].indexOf(value.trim()) < 0) {
-        callback(new Error('学号已存在'))
-      } else {
+      if (this.isEdit) {
         callback()
       }
+      // Ajax validate
+      checkSNoExist({ sno: value })
+        .then(res => {
+          if (res.data.exists) {
+            callback(new Error('学号已存在！'))
+          } else {
+            callback()
+          }
+        })
+        .catch(error => {
+          console.log('校验学号后端出现异常：')
+          console.log(error)
+        })
     }
     return {
       tableLoading: true,
@@ -343,7 +354,7 @@ export default {
     handleExcelDownload() {
       downloadExcel()
         .then(res => {
-          let filePath = res.data.filePath
+          let filePath = res.data['file_path']
           window.open(filePath)
         })
         .catch(error => {
@@ -371,8 +382,8 @@ export default {
       // Ajax request
       uploadAvatar(fileReq)
         .then(res => {
-          this.studentForm.image = res.data.name
-          this.studentForm.imageUrl = res.data.imageUrl
+          this.studentForm.image = res.data['image_name']
+          this.studentForm.imageUrl = res.data['image_url']
           this.$message({
             message: '头像上传成功！',
             type: 'success'
@@ -439,10 +450,7 @@ export default {
         type: 'warning'
       })
         .then(() => {
-          // let self = this
           deleteStudent({ sno: row.sno }).then(res => {
-            console.log('测试this')
-            console.log(this)
             this.students = res.data.students
             this.total = res.data.students.length
             this.getPageStudents()
@@ -492,7 +500,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" scoped></style>
+
+<style lang="scss">
 .avatar-uploader .el-upload {
   border: 1px dashed #d9d9d9;
   border-radius: 6px;

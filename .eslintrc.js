@@ -41,7 +41,7 @@ module.exports = {
      * 最佳实践
      */
     "default-case": ["error"], // 要求 switch 语句中有 default 分支
-    "dot-notation": ["error"], // 强制尽可能地使用点号
+    "dot-notation": ["off"], // 强制尽可能地使用点号
     "eqeqeq": ["warn"], // 要求使用 === 和 !==
     "no-caller": ["error"], // 禁用 arguments.caller 或 arguments.callee
     "no-case-declarations": ["error"], // 不允许在 case 子句中使用词法声明

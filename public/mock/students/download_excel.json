@@ -1,0 +1,8 @@
+{
+  "code": 1,
+  "data": {
+    "filePath": "student-1.png",
+    "imgUrl": "/mock/students/img/student-1.png"
+  },
+  "msg": "表格文件生成成功"
+}

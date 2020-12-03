@@ -1,5 +1,5 @@
-// import { login, logout, getInfo } from '@/api/user' // real api (cancel the annotation in production)
-import { login, logout, getInfo } from '@/api/user-mock' // mock api (delete this line in production)
+// import { login, logout, getInfo } from '@/api/user' // FIXME...real api (cancel the annotation in production)
+import { login, logout, getInfo } from '@/api/user-mock' // FIXME...mock api (delete this line in production)
 import { getToken, setToken, removeToken } from '@/utils/auth'
 
 const getDefaultState = () => {

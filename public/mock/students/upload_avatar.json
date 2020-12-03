@@ -1,0 +1,8 @@
+{
+  "code": 1,
+  "data": {
+    "image_name": "student-1.png",
+    "image_url": "/mock/students/img/student-1.png"
+  },
+  "msg": "图片上传成功"
+}

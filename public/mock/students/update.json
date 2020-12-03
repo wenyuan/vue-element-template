@@ -1,0 +1,239 @@
+{
+  "code": 1,
+  "data": {
+    "students": [
+      {
+        "sno": "95001",
+        "name": "张星星",
+        "gender": "男",
+        "birthday": "1993-02-01",
+        "mobile": "13900998877",
+        "email": "zhangxingxing@gmail.com",
+        "address": "江苏省南京市溧水区宝塔路11号",
+        "image": "student-1.png",
+        "imageUrl": "/mock/students/img/student-1.png"
+      },
+      {
+        "sno": "95002",
+        "name": "李欣",
+        "gender": "女",
+        "birthday": "1994-07-25",
+        "mobile": "13462312498",
+        "email": "lixin@sohu.com",
+        "address": "上海市徐汇区漕宝路99弄",
+        "image": "student-2.png",
+        "imageUrl": "/mock/students/img/student-2.png"
+      },
+      {
+        "sno": "95003",
+        "name": "陈鹏",
+        "gender": "男",
+        "birthday": "1995-03-04",
+        "mobile": "18987123123",
+        "email": "chenpeng@163.com",
+        "address": "上海市闵行区银都路294号",
+        "image": "student-3.png",
+        "imageUrl": "/mock/students/img/student-3.png"
+      },
+      {
+        "sno": "95004",
+        "name": "张丽",
+        "gender": "男",
+        "birthday": "1995-03-05",
+        "mobile": "13482034096",
+        "email": "zhangli@iLync.cn",
+        "address": "上海市徐汇区习勤路100弄",
+        "image": "student-4.png",
+        "imageUrl": "/mock/students/img/student-4.png"
+      },
+      {
+        "sno": "95005",
+        "name": "刘向东",
+        "gender": "男",
+        "birthday": "1995-03-06",
+        "mobile": "13787123123",
+        "email": "liuxiangdong@qq.com",
+        "address": "上海市闵行区春申路295号",
+        "image": "",
+        "imageUrl": ""
+      },
+      {
+        "sno": "95006",
+        "name": "李明博",
+        "gender": "男",
+        "birthday": "1995-03-07",
+        "mobile": "18932178905",
+        "email": "mingbo@sina.com",
+        "address": "上海市徐汇区柳州路101弄",
+        "image": "",
+        "imageUrl": ""
+      },
+      {
+        "sno": "95007",
+        "name": "张子强",
+        "gender": "男",
+        "birthday": "1995-03-08",
+        "mobile": "17600715247",
+        "email": "zhangziqiang@live.cn",
+        "address": "上海市闵行区虹梅南路296号",
+        "image": "",
+        "imageUrl": ""
+      },
+      {
+        "sno": "95008",
+        "name": "王文",
+        "gender": "女",
+        "birthday": "1995-03-09",
+        "mobile": "18238391838",
+        "email": "65212321@qq.com",
+        "address": "上海市徐汇区龙漕路102弄",
+        "image": "",
+        "imageUrl": ""
+      },
+      {
+        "sno": "95009",
+        "name": "刘慧娟",
+        "gender": "女",
+        "birthday": "1995-03-10",
+        "mobile": "18876068428",
+        "email": "liuhuijuan@126.com",
+        "address": "上海市闵行区颛兴东路297号",
+        "image": "",
+        "imageUrl": ""
+      },
+      {
+        "sno": "95010",
+        "name": "陈敏",
+        "gender": "女",
+        "birthday": "1995-03-11",
+        "mobile": "13513745019",
+        "email": "chenmin@sohu.com",
+        "address": "上海市徐汇区桂林路103弄",
+        "image": "",
+        "imageUrl": ""
+      },
+      {
+        "sno": "95011",
+        "name": "王云",
+        "gender": "女",
+        "birthday": "1995-03-12",
+        "mobile": "13051421609",
+        "email": "wangyun@gmail.com",
+        "address": "上海市闵行区开发区大道298号",
+        "image": "",
+        "imageUrl": ""
+      },
+      {
+        "sno": "95012",
+        "name": "沈璐",
+        "gender": "女",
+        "birthday": "1995-03-13",
+        "mobile": "13889098199",
+        "email": "shenlu@sina.cn",
+        "address": "上海市徐汇区田东路104弄",
+        "image": "",
+        "imageUrl": ""
+      },
+      {
+        "sno": "95013",
+        "name": "赵鹏飞",
+        "gender": "男",
+        "birthday": "1995-03-14",
+        "mobile": "15026774790",
+        "email": "zhaopengfei@163.com",
+        "address": "上海市闵行区都市路99号",
+        "image": "",
+        "imageUrl": ""
+      },
+      {
+        "sno": "95014",
+        "name": "张大炮",
+        "gender": "男",
+        "birthday": "1993-03-15",
+        "mobile": "18064451380",
+        "email": "bigpao@sohu.com",
+        "address": "上海市徐汇区钦州北路105弄",
+        "image": "",
+        "imageUrl": ""
+      },
+      {
+        "sno": "95015",
+        "name": "刘梓歌",
+        "gender": "女",
+        "birthday": "1998-03-16",
+        "mobile": "13902127970",
+        "email": "6533422@qq.com",
+        "address": "上海市闵行区都会路300号",
+        "image": "",
+        "imageUrl": ""
+      },
+      {
+        "sno": "95016",
+        "name": "陈照升",
+        "gender": "男",
+        "birthday": "1995-03-17",
+        "mobile": "13339804561",
+        "email": "chenzs@qq.com",
+        "address": "上海市徐汇区中山北路106弄",
+        "image": "",
+        "imageUrl": ""
+      },
+      {
+        "sno": "95017",
+        "name": "秦小路",
+        "gender": "女",
+        "birthday": "1995-03-18",
+        "mobile": "13477481151",
+        "email": "qinxl@sina.com",
+        "address": "上海市闵行区都庄路301号",
+        "image": "",
+        "imageUrl": ""
+      },
+      {
+        "sno": "95018",
+        "name": "张一风",
+        "gender": "男",
+        "birthday": "1995-03-19",
+        "mobile": "13915157742",
+        "email": "zhangyf@sohu.com",
+        "address": "上海市徐汇区桂林东街107弄",
+        "image": "",
+        "imageUrl": ""
+      },
+      {
+        "sno": "95019",
+        "name": "刘佳",
+        "gender": "男",
+        "birthday": "1995-03-20",
+        "mobile": "13352834332",
+        "email": "liujia@sohu.com",
+        "address": "上海市闵行区剑川路302号",
+        "image": "",
+        "imageUrl": ""
+      },
+      {
+        "sno": "95020",
+        "name": "李伟强",
+        "gender": "男",
+        "birthday": "1995-03-21",
+        "mobile": "15990510922",
+        "email": "lwq@126.com",
+        "address": "上海市徐汇区桂林西街108弄",
+        "image": "",
+        "imageUrl": ""
+      },
+      {
+        "sno": "95021",
+        "name": "杨荣",
+        "gender": "男",
+        "birthday": "1995-05-31",
+        "mobile": "13522341234",
+        "email": "yangrong@gmail.com",
+        "address": "江苏省泰州市姜堰区华港镇254号",
+        "image": "",
+        "imageUrl": ""
+      }
+    ]
+  },
+  "msg": "数据修改成功！"
+}
