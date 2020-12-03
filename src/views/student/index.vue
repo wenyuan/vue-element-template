@@ -96,7 +96,7 @@
       >
         <el-upload
           class="avatar-uploader"
-          style="text-align: center; margin: 20px;"
+          style="text-align: center; margin: 0 0 20px 0;"
           action=""
           :show-file-list="false"
           :disabled="isView"
@@ -114,7 +114,7 @@
           </el-col>
           <el-col :span="12">
             <el-form-item label="姓名：" prop="name">
-              <el-input v-model="studentForm.name" :disabled="isView" suffix-icon="el-icon-edit"> </el-input>
+              <el-input v-model="studentForm.name" :disabled="isView" suffix-icon="el-icon-edit"></el-input>
             </el-form-item>
           </el-col>
         </el-row>
@@ -140,7 +140,7 @@
                 :disabled="isView"
                 type="date"
                 placeholder="选择日期"
-                style="width: 100% !important;"
+                style="width: 100%;"
               >
               </el-date-picker>
             </el-form-item>
