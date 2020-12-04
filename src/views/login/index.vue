@@ -217,6 +217,7 @@ $light_gray: #eee;
     width: 30px;
     font-size: 16px;
     color: $dark_gray;
+    text-align: center;
     vertical-align: middle;
   }
 
