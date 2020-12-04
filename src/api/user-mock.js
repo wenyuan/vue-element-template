@@ -19,7 +19,7 @@ export function login(data) {
 
 export function getInfo(token) {
   return request({
-    url: '/api/user/info/',
+    url: '/mock/user/info.json?t=' + new Date().getTime().toString(), // Splice timestamp
     method: 'get',
     params: { token }
   })
@@ -27,7 +27,7 @@ export function getInfo(token) {
 
 export function logout() {
   return request({
-    url: '/api/user/logout/',
-    method: 'post'
+    url: '/mock/user/logout.json?t=' + new Date().getTime().toString(), // Splice timestamp
+    method: 'get'
   })
 }

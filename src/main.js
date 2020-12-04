@@ -14,6 +14,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+import '@/permission' // permission control
+
 import * as filters from './filters' // global filters
 
 Vue.use(ElementUI, {

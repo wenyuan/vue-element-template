@@ -1,0 +1,8 @@
+{
+  "code": 1,
+  "data": {
+    "name": "管理员",
+    "avatar": "/mock/user/img/avatar.png"
+  },
+  "msg": "查询成功！"
+}
