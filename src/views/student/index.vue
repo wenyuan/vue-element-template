@@ -86,6 +86,7 @@
     <!-- table row detail -->
     <el-dialog :title="dialogTitle" :visible.sync="dialogVisible" width="50%" @close="handleDialogClose('studentForm')">
       <el-form
+        class="student-form"
         :model="studentForm"
         :rules="rules"
         ref="studentForm"
@@ -154,7 +155,7 @@
           </el-col>
           <el-col :span="12">
             <el-form-item label="邮箱地址：" prop="email">
-              <el-input v-model="studentForm.email" :disabled="isView" suffix-icon="el-icon-edit"> </el-input>
+              <el-input v-model="studentForm.email" :disabled="isView" suffix-icon="el-icon-edit"></el-input>
             </el-form-item>
           </el-col>
         </el-row>
@@ -522,30 +523,35 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
-
 <style lang="scss">
-.avatar-uploader .el-upload {
-  border: 1px dashed #d9d9d9;
-  border-radius: 6px;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-}
-.avatar-uploader .el-upload:hover {
-  border-color: #409eff;
-}
-.avatar-uploader-icon {
-  font-size: 28px;
-  color: #8c939d;
-  width: 178px;
-  height: 178px;
-  line-height: 178px;
-  text-align: center;
-}
-.avatar {
-  width: 178px;
-  height: 178px;
-  display: block;
+.student-form {
+  /* Copy from element-ui */
+  /* Detail see: https://element.eleme.cn/#/zh-CN/component/upload */
+  .avatar-uploader .el-upload {
+    border: 1px dashed #d9d9d9;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .avatar-uploader .el-upload:hover {
+    border-color: #409eff;
+  }
+
+  .avatar-uploader-icon {
+    font-size: 28px;
+    color: #8c939d;
+    width: 178px;
+    height: 178px;
+    line-height: 178px;
+    text-align: center;
+  }
+
+  .avatar {
+    width: 178px;
+    height: 178px;
+    display: block;
+  }
 }
 </style>
