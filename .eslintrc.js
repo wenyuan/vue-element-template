@@ -8,6 +8,8 @@ module.exports = {
     parser: "babel-eslint"
   },
   plugins: ["prettier"], // 安装 prettier
+  // 官方仓库：https://github.com/eslint/eslint
+  // rules中文释义：https://cloud.tencent.com/developer/chapter/12618
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
@@ -105,7 +107,11 @@ module.exports = {
     "quotes": ["error", "single"], // 使用单引号
     "semi": ["error", "never"], // 行末不加分号，如果加了不报错，仅给出提示
     "semi-spacing": ["error", { "before": false, "after": true }], // 强制分号之前和之后使用一致的空格
-    "space-before-function-paren": ["error", "never"], // 强制在 function的左括号之前使用一致的空格
+    "space-before-function-paren": ["error", {
+      "anonymous": "never",
+      "named": "never",
+      "asyncArrow": "ignore"
+    }], // 强制在 function的左括号之前使用一致的空格
     "space-in-parens": ["error", "never"], // 强制在圆括号内使用一致的空格
     "space-infix-ops": ["error"], // 要求操作符周围有空格
     "space-unary-ops": ["error", { "words": true, "nonwords": false }], // 强制在一元操作符前后使用一致的空格
