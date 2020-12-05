@@ -22,17 +22,15 @@ export default {
     AppMain
   },
   mixins: [ResizeMixin],
-  data() {
-    return {
-      fixedHeader: true // if you move it to $store.state, it'll be flexible.
-    }
-  },
   computed: {
     sidebar() {
       return this.$store.state.app.sidebar
     },
     device() {
       return this.$store.state.app.device
+    },
+    fixedHeader() {
+      return this.$store.state.settings.fixedHeader
     },
     classObj() {
       return {

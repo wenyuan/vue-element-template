@@ -27,11 +27,6 @@ import variables from '@/styles/variables.scss'
 
 export default {
   components: { SidebarItem, Logo },
-  data() {
-    return {
-      showSidebarLogo: true // if you move it to $store.state, it'll be flexible.
-    }
-  },
   computed: {
     ...mapGetters('app', ['sidebar']),
     routes() {
@@ -45,6 +40,9 @@ export default {
         return meta.activeMenu
       }
       return path
+    },
+    showSidebarLogo() {
+      return this.$store.state.settings.showSidebarLogo
     },
     variables() {
       return variables
