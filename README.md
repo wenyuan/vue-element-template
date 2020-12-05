@@ -4,14 +4,6 @@
 
 vue-element-template 是一个小型化 Vue.js 项目模板，它基于 [vue](https://cn.vuejs.org/) 和 [element-ui](https://element.eleme.cn/) 实现。
 
-本项目借鉴 GitHub 上几个不错的项目（取长补短）搭建而成，提炼了典型的目录组织和代码风格，删去了丰富的子功能，仅保留最原始的模型，目的是为了方便快速搭建一个小项目，更适合定制化开发。
-
-以下是我主要参考的项目：
-
-* [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
-* [vue-awesome-template](https://github.com/BryanAdamss/vue-awesome-template)
-* [vue-admin-spa](https://github.com/lss5270/vue-admin-spa)
-
 ## 准备
 
 你需要在本地安装 [node](https://nodejs.org/) 和 [git](https://git-scm.com/) 。
@@ -19,6 +11,16 @@ vue-element-template 是一个小型化 Vue.js 项目模板，它基于 [vue](ht
 本项目通过 `@vue/cli@4.5.9` 脚手架搭建完成，技术栈基于 [ES2015+](http://es6.ruanyifeng.com/) 、[vue](https://cn.vuejs.org/) 、[vuex](https://vuex.vuejs.org/zh/) 、[vue-router](https://router.vuejs.org/zh/) 、[vue-cli](https://cli.vuejs.org/zh/) 、[axios](https://github.com/axios/axios) 和 [element-ui](https://element.eleme.cn/) ，所有的请求数据都使用本地 json 文件进行模拟，力求依赖最少化。
 
 相关依赖的版本参见 `package.json` 文件。
+
+如果初次使用 Vue.js 编写项目，可以先阅读几篇博客文章，关于如何从零构建一个 Vue.js 项目，先看完这些文章后再看本项目代码会清晰很多。
+
+* [Vue CLI 3.x 搭建 Vue 项目](https://www.wenyuanblog.com/blogs/vue-cli3x-to-create-vue-project.html)
+* [Vue 封装 Axios 请求和拦截器](https://www.wenyuanblog.com/blogs/vue-axios-interceptors-packaging.html)
+* [Vuex 业务模块划分项目实例](https://www.wenyuanblog.com/blogs/vue-vuex-module-division-in-real-project.html)
+* [Vue 开发时配置使用 mock 数据](https://www.wenyuanblog.com/blogs/vue-use-mock-data-when-developing.html)
+* [WebStorm 配置代码格式化](https://www.wenyuanblog.com/blogs/webstorm-eslint-prettier-reformat-code.html)
+
+**如有问题请先看上述使用文档和文章，若不能满足，欢迎 issue 和 pr**。
 
 ## 说明
 
@@ -47,8 +49,19 @@ vue-element-template 是一个小型化 Vue.js 项目模板，它基于 [vue](ht
 
 如果你觉得对你有帮助，可以给我一个小星星 ⭐️
 
-## License
+## 版权信息
 
 [MIT](https://opensource.org/licenses/MIT)
 
 Copyright (c) 2020-present, WenYuan
+
+## 鸣谢
+
+本项目借鉴了 GitHub 上几个不错的项目（取长补短），提炼了典型的目录组织和代码风格，删去了丰富的子功能，仅保留最原始的模型，目的是为了方便快速搭建一个小工程，更适合定制化开发。
+
+以下是我主要参考的仓库：
+
+* [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
+* [vue-manage-system](https://github.com/lin-xin/vue-manage-system)
+* [vue-awesome-template](https://github.com/BryanAdamss/vue-awesome-template)
+* [vue-admin-spa](https://github.com/lss5270/vue-admin-spa)
