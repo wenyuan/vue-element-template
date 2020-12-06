@@ -4,15 +4,28 @@
 
 vue-element-template 是一个小型化 Vue.js 项目模板，它基于 [vue](https://cn.vuejs.org/) 和 [element-ui](https://element.eleme.cn/) 实现。
 
+* [在线预览]()
+* [Donate](https://www.wenyuanblog.com/gift.html)
+
 ## 准备
 
 你需要在本地安装 [node](https://nodejs.org/) 和 [git](https://git-scm.com/) 。
 
-本项目通过 `@vue/cli@4.5.9` 脚手架搭建完成，技术栈基于 [ES2015+](http://es6.ruanyifeng.com/) 、[vue](https://cn.vuejs.org/) 、[vuex](https://vuex.vuejs.org/zh/) 、[vue-router](https://router.vuejs.org/zh/) 、[vue-cli](https://cli.vuejs.org/zh/) 、[axios](https://github.com/axios/axios) 和 [element-ui](https://element.eleme.cn/) ，所有的请求数据都使用本地 json 文件进行模拟，力求依赖最少化。
+本项目通过 `@vue/cli@4.5.9` 脚手架搭建完成，主要技术栈：
+
+* [ES2015+](http://es6.ruanyifeng.com/)
+* [vue](https://cn.vuejs.org/)
+* [vuex](https://vuex.vuejs.org/zh/)
+* [vue-router](https://router.vuejs.org/zh/)
+* [vue-cli](https://cli.vuejs.org/zh/)
+* [axios](https://github.com/axios/axios)
+* [element-ui](https://element.eleme.cn/)
+
+所有的请求数据都使用本地 json 文件进行模拟，力求依赖最少化。
 
 相关依赖的版本参见 `package.json` 文件。
 
-如果初次使用 Vue.js 编写项目，可以先阅读几篇博客文章，关于如何从零构建一个 Vue.js 项目，先看完这些文章后再看本项目代码会清晰很多。
+初次使用 Vue.js 编写项目，可以先阅读几篇博客文章，关于如何从零构建一个 Vue.js 项目，看完这些文章后再看本项目代码会清晰很多。
 
 * [Vue CLI 3.x 搭建 Vue 项目](https://www.wenyuanblog.com/blogs/vue-cli3x-to-create-vue-project.html)
 * [Vue 封装 Axios 请求和拦截器](https://www.wenyuanblog.com/blogs/vue-axios-interceptors-packaging.html)
@@ -43,7 +56,46 @@ vue-element-template 是一个小型化 Vue.js 项目模板，它基于 [vue](ht
 
 ## 目录结构
 
-（待更新）
+本项目是通过 vue-cli4 和 webpack5 生成的一个基础工程模型，添加了 vuex、vue-router、axios、element-ui 等基础包以及其他一些配置等等。将它作为项目模板进行开发，能够省去每次通过 vue-cli 初始化项目后的重复工作。
+
+下面是整个项目的目录结构。
+
+```bash
+├── public                     # 无需 webpack 处理的静态资源
+│   │── mock                   # 项目 mock 模拟数据
+│   │── favicon.ico            # favicon 图标
+│   └── index.html             # html 模板
+├── src                        # 源代码
+│   ├── api                    # 封装的所有异步请求
+│   ├── assets                 # 主题、字体、图片等静态资源，编译时会被 webpack 处理
+│   ├── components             # 全局公用组件
+│   ├── directive              # 全局指令（本工程中暂未用到）
+│   ├── filters                # 全局 filter
+│   ├── layout                 # 全局 layout
+│   ├── router                 # 路由模块
+│   ├── store                  # 全局 store 管理（vuex 全局状态管理）
+│   ├── styles                 # 全局样式
+│   ├── utils                  # 全局公用方法
+│   ├── views                  # views 所有页面
+│   ├── App.vue                # 入口页面
+│   ├── main.js                # 入口文件 加载组件 初始化等
+│   ├── permission.js          # 权限管理
+│   └── settings.js            # 项目 settings 功能的默认值
+├── .browserslistrc            # 浏览器兼容列表
+├── .env.development           # 开发环境的环境变量配置文件
+├── .env.production            # 生产环境的环境变量配置文件
+├── .env.xxx                   # 其它场合的环境变量配置文件（如有需要，需结合 package.json 中的 scripts）
+├── .eslintignore              # eslint 语法检查时忽略项的配置文件
+├── .eslintrc.js               # eslint 的配置文件
+├── .gitignore                 # git 需要忽略的文件配置
+├── babel.config.js            # babel 配置
+├── LICENSE                    # 版权文件
+├── package.json               # 项目所需要的各种模块及配置信息
+├── package-lock.json          # 描述所有模块的具体版本信息，保证每次安装时下载大版本号前提下的最新版本
+├── prettier.config.js         # prettier 的配置文件
+├── README.md                  # 项目文档
+└── vue.config.js              # vue-cli 配置（vue project 配置文件）
+```
 
 ## 支持
 
