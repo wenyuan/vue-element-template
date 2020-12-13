@@ -9,7 +9,7 @@ module.exports = {
   },
   plugins: ["prettier"], // 安装 prettier
   // 官方仓库：https://github.com/eslint/eslint
-  // rules中文释义：https://cloud.tencent.com/developer/chapter/12618
+  // rules中文释义：https://cn.eslint.org/docs/rules/
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
