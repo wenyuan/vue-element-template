@@ -1,4 +1,4 @@
-# vue-element-template
+# Vue Element Template
 
 ## 简介
 
