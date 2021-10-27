@@ -4,7 +4,7 @@
 
 vue-element-template 是一个小型化 Vue.js 项目模板，它基于 [vue](https://cn.vuejs.org/) 和 [element-ui](https://element.eleme.cn/) 实现。
 
-* [在线预览](http://vue-element-template.wenyuanblog.com/)
+* [在线预览](http://vue-ele-tpl.wenyuanblog.com/)
 * [Donate](https://www.wenyuanblog.com/gift.html)
 
 ## 准备
