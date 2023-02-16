@@ -19,7 +19,7 @@
             </router-link>
           </li>
           <li class="link-type">
-            <a href="https://www.wenyuanblog.com/">随便看看</a>
+            <a href="javascript:void(0)">随便看看</a>
           </li>
           <li><a href="#" @click.prevent="dialogVisible = true">点我看图</a></li>
         </ul>
