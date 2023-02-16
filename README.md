@@ -4,9 +4,6 @@
 
 vue-element-template 是一个小型化 Vue.js 项目模板，它基于 [vue](https://cn.vuejs.org/) 和 [element-ui](https://element.eleme.cn/) 实现。
 
-* [在线预览](http://vue-element-template.wenyuanblog.com/)
-* [Donate](https://www.wenyuanblog.com/gift.html)
-
 ## 准备
 
 你需要在本地安装 [node](https://nodejs.org/) 和 [git](https://git-scm.com/) 。
@@ -27,11 +24,11 @@ vue-element-template 是一个小型化 Vue.js 项目模板，它基于 [vue](ht
 
 初次使用 Vue.js 编写项目，可以先阅读几篇博客文章，关于如何从零构建一个 Vue.js 项目，看完这些文章后再看本项目代码会清晰很多。
 
-* [Vue CLI 3.x 搭建 Vue 项目](https://www.wenyuanblog.com/blogs/vue-cli3x-to-create-vue-project.html)
-* [Vue 封装 Axios 请求和拦截器](https://www.wenyuanblog.com/blogs/vue-axios-interceptors-packaging.html)
-* [Vuex 业务模块划分项目实例](https://www.wenyuanblog.com/blogs/vue-vuex-module-division-in-real-project.html)
-* [Vue 开发时配置使用 mock 数据](https://www.wenyuanblog.com/blogs/vue-use-mock-data-when-developing.html)
-* [WebStorm 配置代码格式化](https://www.wenyuanblog.com/blogs/webstorm-eslint-prettier-reformat-code.html)
+* [Vue CLI 3.x 搭建 Vue 项目](vue-cli3x-to-create-vue-project.html)（省钱考虑，原博客域名已经卖掉了，这篇文章暂时未部署到线上）
+* [Vue 封装 Axios 请求和拦截器](vue-axios-interceptors-packaging.html)（省钱考虑，原博客域名已经卖掉了，这篇文章暂时未部署到线上）
+* [Vuex 业务模块划分项目实例](vue-vuex-module-division-in-real-project.html)（省钱考虑，原博客域名已经卖掉了，这篇文章暂时未部署到线上）
+* [Vue 开发时配置使用 mock 数据](vue-use-mock-data-when-developing.html)（省钱考虑，原博客域名已经卖掉了，这篇文章暂时未部署到线上）
+* [WebStorm 配置代码格式化](webstorm-eslint-prettier-reformat-code.html)（省钱考虑，原博客域名已经卖掉了，这篇文章暂时未部署到线上）
 
 **如有问题请先看上述使用文档和文章，若不能满足，欢迎 issue 和 pr**。
 
